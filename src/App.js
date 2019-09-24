@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 import SigninForm from './Components/SignForm';
+import LogForm from './Components/LogForm';
 
 function App() {
   return (
