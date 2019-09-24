@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import { withFormik, Form, Field } from 'formik';
 
-const LoginForm = ({ values, status, touched, errors }) => {
+const SigninForm = ({ values, status, touched, errors }) => {
   const [info, setinfo] = useState([]);
 
   useEffect(() => {
@@ -55,16 +55,10 @@ const LoginForm = ({ values, status, touched, errors }) => {
           </span>
         </label>
 
-        {/* <label>
-          Term of Services:
-          <Field type='checkbox' name='tos' checked={values.tos}></Field>
-          <span className='checkmark'></span>
-        </label> */}
-
         <button type='submit'>Submit</button>
       </Form>
 
-      <div className='display-info'>
+      {/* <div className='display-info'>
         {info.map(ele => (
           <ul key={ele.id}>
             <li id='lists'>Username: {ele.username}</li>
@@ -72,12 +66,12 @@ const LoginForm = ({ values, status, touched, errors }) => {
             <li id='lists'> Term of Services: </li>
           </ul>
         ))}
-      </div>
+      </div> */}
     </div>
   ); //close return
 }; //close form
 
-const FormikLoginForm = withFormik({
+const FormikSigninForm = withFormik({
   mapPropsToValues({ username, password, email, tos }) {
     return {
       username: username || '',
@@ -103,6 +97,6 @@ const FormikLoginForm = withFormik({
         console.log('error', error);
       });
   }
-})(LoginForm); //close formik form
+})(SigninForm); //close formik form
 
-export default FormikLoginForm;
+export default FormikSigninForm;
