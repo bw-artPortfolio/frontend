@@ -36,6 +36,8 @@ const LoginForm = ({ values, status, touched, errors }) => {
         </label>
 
         <button type='submit'>Log In</button>
+        <p>or</p>
+        <button>Sign Up</button>
       </Form>
     </div>
   ); //close return
@@ -51,15 +53,18 @@ const FormikLoginForm = withFormik({
 
   validationSchema: Yup.object().shape({
     username: Yup.string().required('Required'),
-    password: Yup.string().required('Required')
+    password: Yup.string()
+      .required('No password provided.')
+      .min(8, 'Password is too short - should be 8 chars minimum.')
+      .matches(/(?=.*[0-9])/, 'Password must contain a number.')
   }), //close validation
 
   handleSubmit(values, { setStatus }) {
     console.log('Values', values);
     const testValue = { username: values.username, password: values.password };
     axios
-      .post(
-        'https://art-portfolio-backend.herokuapp.com/api/register',
+      .get(
+        'https://art-portfolio-backend.herokuapp.com/api/entries/',
         testValue
       )
       .then(res => {

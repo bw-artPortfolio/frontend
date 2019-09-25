@@ -3,6 +3,7 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import { withFormik, Form, Field } from 'formik';
 import LogForm from './LogForm';
+import { Link } from 'react-router-dom';
 
 const SigninForm = ({ values, status, touched, errors }) => {
   const [info, setinfo] = useState([]);
@@ -47,9 +48,9 @@ const SigninForm = ({ values, status, touched, errors }) => {
         </label>
 
         <button type='submit'>Submit</button>
-        <a href='#' onClick={LogForm}>
+        {/* <a href='#' onClick={LogForm}>
           Log in
-        </a>
+        </a> */}
       </Form>
     </div>
   ); //close return
@@ -66,7 +67,10 @@ const FormikSigninForm = withFormik({
 
   validationSchema: Yup.object().shape({
     username: Yup.string().required('Required'),
-    password: Yup.string().required('Required'),
+    password: Yup.string()
+      .required('No password provided.')
+      .min(8, 'Password is too short - should be 8 chars minimum.')
+      .matches(/(?=.*[0-9])/, 'Password must contain a number.'),
     email: Yup.string().required('Required')
   }), //close validation
 
@@ -74,7 +78,10 @@ const FormikSigninForm = withFormik({
     console.log('Values', values);
     const testValue = { username: values.username, password: values.password };
     axios
-      .post('https://art-portfolio-backend.herokuapp.com/api/login', testValue)
+      .post(
+        'https://art-portfolio-backend.herokuapp.com/api/entries',
+        testValue
+      )
       .then(res => {
         setStatus(res);
         console.log(res);
