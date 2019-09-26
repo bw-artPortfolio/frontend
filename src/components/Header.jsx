@@ -7,11 +7,20 @@ const Header = () => {
     <div>
       <div className='Header'>
         <nav className='Nav'>
-          <div className='Search'>Search</div>
-          <div className='HeadingText'>
-            <strong>ARTFOLIO</strong>
+          <div>
+            <input
+              className='search-bar'
+              type='text'
+              placeholder='Search...'></input>
           </div>
-          <div className='About'>
+          {/* <a href='#' className='Search'>
+            Search
+          </a> */}
+          <div className='HeadingText'>
+            <h1>ARTFOLIO</h1>
+          </div>
+
+          <div className='nav-bar'>
             {/*connect with react router*/}
             <a href='#' id='about'>
               About
@@ -21,6 +30,9 @@ const Header = () => {
             </a>
             <a href='#' id='cart'>
               Cart
+            </a>
+            <a href='#' id='login'>
+              Log in
             </a>
           </div>
         </nav>

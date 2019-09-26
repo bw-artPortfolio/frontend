@@ -64,7 +64,21 @@
 
 #about,
 #artists,
-#cart {
+#cart,
+#login {
   margin: 0 1vw;
   font-family: 'Josefin Sans', sans-serif;
+}
+.nav-bar {
+  padding-top: 2vw;
+}
+.nav-bar a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  padding-top: 2vw;
+}
+.search-bar {
+  width: 300px;
+  border-radius: 20px;
 }

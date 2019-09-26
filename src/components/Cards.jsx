@@ -33,7 +33,6 @@ const Image = styled.img`
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-
   width: 100%;
 `;
 
@@ -42,10 +41,11 @@ function Cards(props) {
     <Card>
       <Image src={props.url} alt='card' />
       <p>
-        <b>{props.artistName}</b>
+        Artist:
+        <b> {props.artistName}</b>
       </p>
       {/* {'\n'} */}
-      <p>{props.title}</p>
+      <p>Description: {props.title}</p>
       {/* {'\n'} */}
     </Card>
   );
