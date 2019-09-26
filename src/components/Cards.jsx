@@ -17,31 +17,37 @@ box-shadow: 1px 2px #888888; */
   vertical-align: top;
 `;
 
+const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  margin: 10px 10px;
+`;
+
 const Image = styled.img`
   width: 100%;
   object-fit: cover;
   background-color: #f6f6f6;
-  padding: 2em;
+  padding: 0em;
 `;
 const Container = styled.div`
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
 
-  //   width: 100%;
+  width: 100%;
 `;
 
 function Cards(props) {
   return (
-    <Container>
-      <Paragraph>
-        <Image src={props.url} alt='card' />
+    <Card>
+      <Image src={props.url} alt='card' />
+      <p>
         <b>{props.artistName}</b>
-        {'\n'}
-        {props.title}
-        {'\n'}
-      </Paragraph>
-    </Container>
+      </p>
+      {/* {'\n'} */}
+      <p>{props.title}</p>
+      {/* {'\n'} */}
+    </Card>
   );
 }
 
