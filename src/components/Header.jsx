@@ -12,6 +12,7 @@ return (
             <div className="Search">Search</div>
             <div className="HeadingText"><strong>ARTFOLIO</strong></div>
             <div className="About">
+                {/*connect with react router*/}
                 <div id="about">About</div>
                 <div id="artists">Artists</div>
                 <div id="cart">Cart</div>
