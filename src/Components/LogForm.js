@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import * as Yup from 'yup';
 import axios from 'axios';
 import { withFormik, Form, Field } from 'formik';
+import { Link } from 'react-router-dom';
 
 const LoginForm = ({ values, status, touched, errors }) => {
   const [info, setinfo] = useState([]);
@@ -37,7 +38,9 @@ const LoginForm = ({ values, status, touched, errors }) => {
 
         <button type='submit'>Log In</button>
         <p>or</p>
-        <button>Sign Up</button>
+        <Link to='/signup'>
+          <button>Sign Up</button>
+        </Link>
       </Form>
     </div>
   ); //close return
