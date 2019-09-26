@@ -1,5 +1,5 @@
 import React from 'react';
-import Placeholder from "./placeholder.jpg";
+import Placeholder from "../placeholder.jpg";
 
 
 const HeaderImage = () => {

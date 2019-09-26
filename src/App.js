@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
-import Header from "./Header";
-import Cards from "./Cards";
+import Header from "./components/Header";
+import Cards from "./components/Cards";
 
 const App = () => {
   const [People, setPeople] = useState([]);
@@ -17,7 +17,7 @@ const App = () => {
   
     
     .catch(error => {
-        console.log("Oops - Star Wars Broke!", error);
+        console.log("", error);
     })
   }, []);
 
