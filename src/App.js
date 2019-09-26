@@ -15,7 +15,7 @@ const App = () => {
       <Header />
       {/*<Nav /> */}
       {/* <EntryCard /> */}
-      <h1>In the app return</h1>
+      <h1>Gallery</h1>
 
       <div>
         <Route exact path='/' component={LandingPage} />
