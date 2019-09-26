@@ -1,22 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans:400,700&display=swap');
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative; 
+  width: 100%;
 }
 
 .App-link {
   color: #09d3ac;
 }
+
+.App {
+  background-color: black;
+}
+
+.Header {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  width: 100%;
+  height: 12vh;
+}
+
+.HeaderDiv {
+  width: 100%;
+  height: 88vh;
+  background-color: rgb(33, 112, 185);
+}
+
+.HeaderImage {
+  width: 100%;
+  object-fit: contain;
+}
+
+
+.HeadingText {
+  display: flex;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  
+}
+
+.Search, .About {
+  display: flex;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#about, #artists, #cart {
+  margin: 0 1vw;
+  font-family: 'Josefin Sans', sans-serif;
+}
+

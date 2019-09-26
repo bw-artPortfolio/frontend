@@ -1,24 +1,42 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, {useState, useEffect} from 'react';
+import './App.css';
+import axios from 'axios';
+import Header from "./Header";
+import Cards from "./Cards";
 
-function App() {
+const App = () => {
+  const [People, setPeople] = useState([]);
+  
+  useEffect(() => {
+    axios
+    .get("https://art-portfolio-backend.herokuapp.com/api/entries/")
+    .then(response  => {
+    setPeople(response.data.results)
+    console.log(response.data.results)
+    }, [])
+  
+    
+    .catch(error => {
+        console.log("Oops - Star Wars Broke!", error);
+    })
+  }, []);
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.jla;sdjf
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <Header />
       </header>
+      <div>
+    {/* {People.map((people) =>
+            <Cards
+              name={people.name}
+              birth_year={people.birth_year}
+              gender={people.gender}
+              />
+            )} */}
+            Hey!
+    </div>
     </div>
   );
 }
