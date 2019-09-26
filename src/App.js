@@ -8,6 +8,7 @@ import { Route } from 'react-router-dom';
 import EntryCard from './components/EntryCard'
 import GalleryPage from './components/GalleryPage'
 import LandingPage from './components/LandingPage'
+import Header from './components/Header';
 
 
 const App = () => {

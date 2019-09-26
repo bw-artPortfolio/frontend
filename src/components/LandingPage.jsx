@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
+import '../App.css';
 import axios from 'axios';
-import Header from "./components/Header";
 import Cards from "./Cards";
 
 const LandingPage = () => {
