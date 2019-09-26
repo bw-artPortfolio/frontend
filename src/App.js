@@ -7,18 +7,19 @@ import { Route } from 'react-router-dom';
 // import LocationsList from './components/LocationsList';
 import EntryCard from './components/EntryCard'
 import GalleryPage from './components/GalleryPage'
+import LandingPage from './components/LandingPage'
 
 
 const App = () => {
   return (
     <div>
-      {/* <Header />
-      <Nav /> */}
+       <Header />
+      {/*<Nav /> */}
       <EntryCard/>
       <h1>In the app return</h1>
     
     <div>
-      <Route exact path='/' component={App} />
+      <Route exact path='/' component={LandingPage} />
       <Route path='/gallery' component={GalleryPage} />
       {/* <Route path='/location' component={LocationsList} /> */}
       </div>
