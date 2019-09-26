@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import '../App.css';
 import axios from 'axios';
-
-import Cards from './Cards';
+import Cards from "./Cards";
 
 const LandingPage = () => {
   const [People, setPeople] = useState([]);

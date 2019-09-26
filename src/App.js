@@ -5,6 +5,11 @@ import Header from './Components/Header';
 // import WelcomePage from './components/WelcomePage';
 // import EntriesList from './components/EntriesList';
 // import LocationsList from './components/LocationsList';
+import EntryCard from './components/EntryCard'
+import GalleryPage from './components/GalleryPage'
+import LandingPage from './components/LandingPage'
+import Header from './components/Header';
+
 // import EntryCard from './components/EntryCard';
 import GalleryPage from './Components/GalleryPage';
 import LandingPage from './Components/LandingPage';
