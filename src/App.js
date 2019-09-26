@@ -11,8 +11,8 @@ const App = () => {
     axios
     .get("https://art-portfolio-backend.herokuapp.com/api/entries/")
     .then(response  => {
-    setPeople(response.data.results)
-    console.log(response.data.results)
+    setPeople(response.data.entries)
+    console.log(response.data.entries)
     }, [])
   
     
@@ -21,6 +21,7 @@ const App = () => {
     })
   }, []);
 
+  
 
   return (
     <div className="App">
@@ -28,14 +29,14 @@ const App = () => {
       <Header />
       </header>
       <div>
-    {/* {People.map((people) =>
+    {People.map((artists) =>
             <Cards
-              name={people.name}
-              birth_year={people.birth_year}
-              gender={people.gender}
+              artistName={artists.artistName}
+              title={artists.title}
+              url={artists.url}
               />
-            )} */}
-            Hey!
+            )
+    }
     </div>
     </div>
   );

@@ -5,14 +5,20 @@ const Paragraph = styled.span`
 font-size: 1.1em;
 margin: 2em;
 width: 12em;
+height: 18em;
 padding: 2em;
-background-color: black;
+background-color: #F6F6F6;
 white-space: pre-wrap;
 display: inline-block;
-border: 2px black solid;
-border-radius: 6px;
-box-shadow: 1px 2px #888888;
-color: white;
+/* border: 2px black solid; */
+/* border-radius: 6px;
+box-shadow: 1px 2px #888888; */
+color: black;
+`
+
+const Image = styled.img`
+width: 100%;
+object-fit: contain;
 `
 
 
@@ -20,7 +26,13 @@ color: white;
 function Cards(props) {
     return (
         
-        <Paragraph><b>{props.name}</b> {'\n'}Born {props.birth_year} {'\n'}{props.gender}</Paragraph>
+        <Paragraph>
+        <Image src={props.url} alt="card" />
+        <b>{props.artistName}</b> 
+        {'\n'}
+        {props.title} 
+        {'\n'}
+        </Paragraph>
         
     )
 }

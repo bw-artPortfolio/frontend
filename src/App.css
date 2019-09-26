@@ -14,7 +14,7 @@
 }
 
 .App {
-  background-color: black;
+  background-color: white;
 }
 
 .Header {
@@ -32,6 +32,7 @@
 
 .HeaderImage {
   width: 100%;
+  height:88vh;
   object-fit: contain;
 }
 
