@@ -24,15 +24,13 @@ const LandingPage = () => {
     <div className='App'>
       {/*<Header />*/}
 
-      <div>
-        {People.map(artists => (
-          <Cards
-            artistName={artists.artistName}
-            title={artists.title}
-            url={artists.url}
-          />
-        ))}
-      </div>
+      {People.map(artists => (
+        <Cards
+          artistName={artists.artistName}
+          title={artists.title}
+          url={artists.url}
+        />
+      ))}
     </div>
   );
 };
