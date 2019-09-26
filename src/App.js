@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import { Route } from 'react-router-dom';
-// import Header from "./components/Header.js";
+import Header from './Components/Header';
 // import Nav from "./components/Nav";
 // import WelcomePage from './components/WelcomePage';
 // import EntriesList from './components/EntriesList';
@@ -10,22 +10,24 @@ import GalleryPage from './components/GalleryPage'
 import LandingPage from './components/LandingPage'
 import Header from './components/Header';
 
+// import EntryCard from './components/EntryCard';
+import GalleryPage from './Components/GalleryPage';
+import LandingPage from './Components/LandingPage';
 
 const App = () => {
   return (
     <div>
-       <Header />
+      <Header />
       {/*<Nav /> */}
-      <EntryCard/>
-      <h1>In the app return</h1>
-    
-    <div>
-      <Route exact path='/' component={LandingPage} />
-      <Route path='/gallery' component={GalleryPage} />
-      {/* <Route path='/location' component={LocationsList} /> */}
-      </div>
+      {/* <EntryCard /> */}
+      <h1>Gallery</h1>
 
+      <div>
+        <Route exact path='/' component={LandingPage} />
+        <Route path='/gallery' component={GalleryPage} />
+        {/* <Route path='/location' component={LocationsList} /> */}
+      </div>
     </div>
   );
-}
-export default App
+};
+export default App;

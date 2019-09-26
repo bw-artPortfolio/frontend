@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
 import axios from 'axios';
-import Cards from "./Cards";
+
+import Cards from './Cards';
 
 const LandingPage = () => {
   const [People, setPeople] = useState([]);
@@ -23,13 +24,15 @@ const LandingPage = () => {
     <div className='App'>
       {/*<Header />*/}
 
-      {People.map(artists => (
-        <Cards
-          artistName={artists.artistName}
-          title={artists.title}
-          url={artists.url}
-        />
-      ))}
+      <div>
+        {People.map(artists => (
+          <Cards
+            artistName={artists.artistName}
+            title={artists.title}
+            url={artists.url}
+          />
+        ))}
+      </div>
     </div>
   );
 };
