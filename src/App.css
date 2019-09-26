@@ -5,7 +5,7 @@
 }
 
 .App-logo {
-  position: relative; 
+  position: relative;
   width: 100%;
 }
 
@@ -15,6 +15,9 @@
 
 .App {
   background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .Header {
@@ -31,12 +34,11 @@
 }
 
 .HeaderImage {
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   overflow: hidden;
 }
-
 
 .HeadingText {
   display: flex;
@@ -52,16 +54,17 @@
   padding-top: 2vw;
   padding-left: 4vw;
   padding-right: 4vw;
-  
 }
 
-.Search, .About {
+.Search,
+.About {
   display: flex;
   font-family: 'Josefin Sans', sans-serif;
 }
 
-#about, #artists, #cart {
+#about,
+#artists,
+#cart {
   margin: 0 1vw;
   font-family: 'Josefin Sans', sans-serif;
 }
-
