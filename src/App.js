@@ -17,8 +17,6 @@ const App = props => {
     <div>
       <Header />
 
-      <h1>Gallery</h1>
-
       <div>
         <Route exact path="/" component={LandingPage} />
         <Route path="/login" component={SignForm} />
