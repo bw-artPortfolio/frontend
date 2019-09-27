@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
-import '../App.css';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import "../App.css";
+import axios from "axios";
 import Cards from "./Cards";
 
 const LandingPage = () => {
@@ -8,20 +8,21 @@ const LandingPage = () => {
 
   useEffect(() => {
     axios
-      .get('https://art-portfolio-backend.herokuapp.com/api/entries/')
+      .get("https://art-portfolio-backend.herokuapp.com/api/entries/")
       .then(response => {
         setPeople(response.data.entries);
         console.log(response.data.entries);
       }, [])
 
       .catch(error => {
-        console.log('', error);
+        console.log("", error);
       });
   }, []);
 
   return (
-    <div className='App'>
+    <div className="App">
       {/*<Header />*/}
+      <h1>Gallery</h1>
 
       {People.map(artists => (
         <Cards
