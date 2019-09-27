@@ -1,31 +1,42 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
-import Header from './Components/Header';
-// import Nav from "./components/Nav";
-// import WelcomePage from './components/WelcomePage';
-// import EntriesList from './components/EntriesList';
-// import LocationsList from './components/LocationsList';
-import EntryCard from './components/EntryCard'
-import GalleryPage from './components/GalleryPage'
-import LandingPage from './components/LandingPage'
-import Header from './components/Header';
+import React from "react";
+import { Route } from "react-router-dom";
+import Header from "./Components/Header";
+import Entrys from "./Components/Entrys";
+import LandingPage from "./Components/LandingPage";
+import SignForm from "./Components/SignForm";
+import Artists from "./Components/Artists";
+import ShoppingCart from "./Components/ShoppingCart";
+import GalleryPage from "./Components/GalleryPage";
+import Cards from "./Components/Cards";
 
-// import EntryCard from './components/EntryCard';
-import GalleryPage from './Components/GalleryPage';
-import LandingPage from './Components/LandingPage';
+const App = props => {
+  console.log("App.js -> %cprops:", "color: cadetBlue", props);
 
-const App = () => {
+  console.log("App.js -> %cEntrys.data:", "color: chocolate", Entrys.data);
   return (
     <div>
       <Header />
-      {/*<Nav /> */}
-      {/* <EntryCard /> */}
+
       <h1>Gallery</h1>
 
       <div>
-        <Route exact path='/' component={LandingPage} />
-        <Route path='/gallery' component={GalleryPage} />
-        {/* <Route path='/location' component={LocationsList} /> */}
+        <Route exact path="/" component={LandingPage} />
+        <Route path="/login" component={SignForm} />
+        <Route path="/artists" component={Artists} />
+        <Route path="/cart" component={ShoppingCart} />
+
+        {/* The spread props(history, match, etc, are passing below. Data, not so much.) */}
+
+        <Route
+          path="/gallery"
+          component={GalleryPage}
+          render={props => <GalleryPage {...props} props={props} />}
+        />
+        <Route
+          path="/cards"
+          component={Cards}
+          render={props => <Cards {...props} data={Entrys.data} />}
+        />
       </div>
     </div>
   );

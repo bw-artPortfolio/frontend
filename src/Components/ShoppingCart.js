@@ -1,6 +1,6 @@
-import React, {useContext} from 'react';
-import CartContext from '../contexts/CartContext';
-import Item from './ShoppingCartItem';
+import React, { useContext } from "react";
+import CartContext from "./contexts/CartContext";
+import Item from "./ShoppingCartItem";
 
 function ShoppingCart() {
   const cart = useContext(CartContext);
@@ -18,7 +18,7 @@ function ShoppingCart() {
         <Item key={item.id} {...item} />
       ))}
 
-			 <div className="shopping-cart__checkout">
+      <div className="shopping-cart__checkout">
         <p>Total: ${getCartTotal()}</p>
         <button>Checkout</button>
       </div>
