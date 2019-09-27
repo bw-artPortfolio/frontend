@@ -27,7 +27,7 @@ const SigninForm = ({ values, status, touched, errors }) => {
 
         <label>
           Password:
-          <Field type='text' name='password'></Field>
+          <Field type='password' name='password'></Field>
           <span>
             {touched.password && errors.password && (
               <span className='error-text'>{errors.password}</span>

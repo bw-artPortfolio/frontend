@@ -1,7 +1,7 @@
 import React,{createContext} from 'react'
 import {Route} from 'react-router-dom'
-import ShoppingCart from '../components/ShoppingCart'
-import Entrys from '../components/Entry'
+import ShoppingCart from '../ShoppingCart';
+import Entry from '../Entry';
 
 const CartContext = createContext() 
  

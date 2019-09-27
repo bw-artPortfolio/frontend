@@ -40,45 +40,55 @@
   overflow: hidden;
 }
 
+
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  /* padding-top: 2vw; */
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
 .HeadingText {
   display: flex;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
 }
-
-.Nav {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 2vw;
-  padding-left: 4vw;
-  padding-right: 4vw;
-}
-
 .Search,
 .About {
   display: flex;
   font-family: 'Josefin Sans', sans-serif;
+  margin: 0 1vw;
+  margin-top: 100px;
 }
 
 #about,
+#home,
+#signup,
 #artists,
 #cart,
 #login {
   margin: 0 1vw;
   font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  
 }
+
 .nav-bar {
-  padding-top: 2vw;
-}
-.nav-bar a {
   text-decoration: none;
   color: black;
   font-size: 1.5rem;
-  padding-top: 2vw;
+  margin-top: 1vw;
 }
 .search-bar {
-  width: 300px;
+  width: 250px;
+  height: 1em;
   border-radius: 20px;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 10 1vw;
+  padding: 5px;
+  margin-top: 1.6vw;
 }
