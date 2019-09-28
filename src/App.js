@@ -16,15 +16,13 @@ const App = props => {
   return (
     <div>
       <Header />
+      
 
       <div>
         <Route exact path="/" component={LandingPage} />
         <Route path="/login" component={SignForm} />
         <Route path="/artists" component={Artists} />
         <Route path="/cart" component={ShoppingCart} />
-
-        {/* The spread props(history, match, etc, are passing below. Data, not so much.) */}
-
         <Route
           path="/gallery"
           component={GalleryPage}

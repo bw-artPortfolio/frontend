@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import HeaderImage from "../components/HeaderImage";
+// import HeaderImage from "./HeaderImage";
 import { NavLink } from "react-router-dom";
 
 const Header = props => {
@@ -24,8 +24,7 @@ const Header = props => {
             <strong>ARTFOLIO</strong>
           </div>
           <div className="About">
-            {/*NavLinks set up, but they need to be styled.*/}
-            {/* Tried to pass props via <Link> got it to work before, lost the code */}
+           
             <div className="nav-bar">
               <NavLink to="/">Home</NavLink>
               <NavLink to="/login" id="login">
@@ -39,22 +38,11 @@ const Header = props => {
                 Cart
               </NavLink>
             </div>
-            {/* <a href='#' id='about'>
-              About
-            </a>
-            <a href='#' id='artists'>
-              Artists
-            </a>
-            <a href='#' id='cart'>
-              Cart
-            </a>
-            <a href='#' id='login'>
-              Log in
-            </a> */}
+           
           </div>
         </nav>
       </div>
-      <HeaderImage />
+      {/* <HeaderImage /> */}
     </div>
   );
 };

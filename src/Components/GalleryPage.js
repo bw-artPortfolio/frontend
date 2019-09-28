@@ -1,14 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import '../App.css';
+import axios from 'axios';
+import Cards from './Cards';
 
+const GalleryPage = () => {
+    const [People, setPeople] = useState([]);
 
-
-const PortfolioPage = () => {
-
-
-
-return (
-    <h1>Hi There!</h1>
-)
-
+    useEffect(() => {
+      axios
+        .get('https://art-portfolio-backend.herokuapp.com/api/entries/')
+        .then(response => {
+          setPeople(response.data.entries);
+          console.log(response.data.entries);
+        }, [])
+  
+        .catch(error => {
+          console.log('', error);
+        });
+    }, []);
+  
+    return (
+      <div className='App'>
+       
+  
+        <div className ='gallery'>
+          {People.map(artists => (
+            <Cards
+              artistName={artists.artistName}
+              title={artists.title}
+              url={artists.url}
+            />
+          ))}
+        </div>
+      </div>
+    );
 }
-export default PortfolioPage
+export default GalleryPage

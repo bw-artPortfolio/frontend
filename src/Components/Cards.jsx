@@ -7,12 +7,12 @@ margin: 1em;
 width: 15em;
 height: 15em;
 padding: 2em;
-background-color: white;
+background-color:  palevioletred;
 white-space: pre-wrap;
 display: inline-block;
 /* border: 2px black solid; */
-/* border-radius: 6px;
-box-shadow: 1px 2px #888888; */
+/* border-radius: 6px; */
+
 color: black;
 vertical-align: top;
 `
@@ -21,6 +21,7 @@ const Image = styled.img`
 width: 100%;
 object-fit: cover ;
 background-color: #F6F6F6;
+box-shadow: 1px 2px #888888;
 padding: 2em;
 `
 

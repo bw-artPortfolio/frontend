@@ -12,17 +12,17 @@
 .App-link {
   color: #09d3ac;
 }
-
+palevioletred
 .App {
-  background-color: white;
+  background-color: palevioletred;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 
 .Header {
-  background-color: rgb(255, 255, 255);
-  color: black;
+  background-color: lightcyan;
+  color: lightslategray;
   width: 100%;
   height: 12vh;
 }
@@ -30,7 +30,7 @@
 .HeaderDiv {
   width: 100%;
   height: 88vh;
-  background-color: rgb(33, 112, 185);
+  /* background-color: rgb(33, 112, 185); */
 }
 
 .HeaderImage {
@@ -74,7 +74,7 @@
 }
 .nav-bar a {
   text-decoration: none;
-  color: black;
+  color: lightslategray;
   font-size: 1.5rem;
   padding-top: 2vw;
 }

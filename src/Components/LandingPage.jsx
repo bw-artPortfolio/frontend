@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 import axios from 'axios';
+import HeaderImage from './HeaderImage';
 
 import Cards from './Cards';
 
@@ -22,7 +23,7 @@ const LandingPage = () => {
 
   return (
     <div className='App'>
-      {/*<Header />*/}
+      <HeaderImage /> 
 
       <div>
         {People.map(artists => (
