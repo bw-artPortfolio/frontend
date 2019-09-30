@@ -43,17 +43,22 @@ palevioletred
 .HeadingText {
   display: flex;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
-  text-align: center;
+  font-size: xx-large;
+  justify-content: flex-start;
   letter-spacing: 3px;
+  
+  width:45%;
 }
 
 .Nav {
   display: flex;
   justify-content: space-between;
-  padding-top: 2vw;
-  padding-left: 4vw;
-  padding-right: 4vw;
+  align-items: center;
+ padding: 2vw,2vw,2vw,2vw;
+  height: 5vw;
+  margin: 0 0 0 0 ;
+  /* border: 2px solid red; */
+
 }
 
 .Search,
